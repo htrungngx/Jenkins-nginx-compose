@@ -1,0 +1,21 @@
+# docker-compose.yaml
+version: '3.8'
+services:
+  jenkins:
+    restart: always
+    tty: true
+    environment:
+      VAULT_ADDR: "http://vault-server:8200"
+    image: daotoanhd/jenkins:1.0.0
+    privileged: true
+    user: root
+    ports:
+     - 8080:8080
+     - 50000:50000
+    container_name: jenkins
+    volumes:
+      - jenkins:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  jenkins:
