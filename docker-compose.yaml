@@ -16,7 +16,7 @@ services:
     container_name: jenkins
     restart: always
     tty: true
-    image: daotoanhd/jenkins:1.0.0
+    image: jenkins/jenkins
     privileged: true
     user: root
     ports:
