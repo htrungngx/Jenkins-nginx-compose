@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -15,12 +15,14 @@ echo \
 
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 sudo systemctl enable docker.service
 
 sudo systemctl enable containerd.service
 
-sudo groupadd docker
+sudo usermod -aG docker ${USER}
 
-sudo usermod -aG docker vagrant
+su - ${USER}
+
+sudo usermod -aG docker ${USER}
