@@ -21,8 +21,6 @@ sudo systemctl enable docker.service
 
 sudo systemctl enable containerd.service
 
-sudo usermod -aG docker ${USER}
-
-su - ${USER}
+sudo groupadd docker
 
 sudo usermod -aG docker ${USER}
