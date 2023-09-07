@@ -23,7 +23,7 @@ sudo systemctl enable containerd.service
 
 sudo groupadd docker
 
-sudo usermod -aG ${USER} docker
+sudo usermod -aG docker ${USER}
 
 newgrp docker 
 
