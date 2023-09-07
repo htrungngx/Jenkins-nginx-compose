@@ -23,6 +23,8 @@ sudo systemctl enable containerd.service
 
 sudo groupadd docker
 
-sudo gpasswd -a $USER docker
+sudo usermod -aG ${USER} docker
 
 newgrp docker 
+
+sudo sysctl -w vm.max_map_count=262144
