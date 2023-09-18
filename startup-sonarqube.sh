@@ -6,7 +6,7 @@ git clone https://github.com/htrungngx/Jenkins-nginx-compose.git
 
 cd Jenkins-nginx-compose
 wait 30   
-sudo ./vm-startup-script.sh
+sudo ./startup-docker.sh
 wait 30
 cd sonarqube 
 sudo docker-compose up -d
