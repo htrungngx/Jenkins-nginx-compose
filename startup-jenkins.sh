@@ -10,3 +10,4 @@ sudo ./startup-docker.sh
 wait 30
 cd jenkins
 sudo docker-compose up -d
+
